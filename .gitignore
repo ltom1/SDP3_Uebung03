@@ -1,0 +1,13 @@
+*.toc
+*.gz
+*.aux
+*.log
+
+# NuGet packages
+**/packages/
+
+*.vs
+*x64/
+*x32/
+
+doxy/*
