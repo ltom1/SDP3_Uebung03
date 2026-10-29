@@ -1,0 +1,100 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>315</x><y>522</y><w>225</w><h>180</h></coordinates><panel_attributes>MusicPlayer
+--
+- mVolume: size_t
+--
++ Start(): void
++ Stop(): void
++ SwitchNext(): void
++ GetNext(): size_t
++ Find(name: std::string): bool
++ GetCount(): size_t
++ IncreaseVol(vol size_t): void
++ DecreaseVol(vol size_t): void
++ Add(name: std::string, dur, size_t): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>576</x><y>522</y><w>234</w><h>180</h></coordinates><panel_attributes>VideoPlayer
+--
+- mVolume: size_t
+--
++ Play(): void
++ Stop(): void
++ First(): bool
++ ActIndex(): size_t
++ ActVideo(): std::string
++ SetVolume(vol: size_t): void
++ GetVolume(): size:t
++ Add(name: std::string, dur: size_t,
+												format: VideoFormat)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>900</x><y>639</y><w>117</w><h>81</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+VideoFormat
+--
++ WMV
++ AVI
++ MKV</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>900</x><y>522</y><w>135</w><h>108</h></coordinates><panel_attributes>Video
+--
+- mName: std::string
+- mDuration: size_t
+--
++ GetName(): std::string
++ GetDuration(): size_t
++ GetFormat(): VideoFormat
++ SetName(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>81</x><y>522</y><w>144</w><h>99</h></coordinates><panel_attributes>Song
+--
+- mName: std::string
+- mDuration: size_t
+--
++ GetName(): std::string
++ GetDuration(): size_t
++ SetName(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>450</x><y>126</y><w>225</w><h>135</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+IMediaPlayer
+--
+/+ Play(): void = 0/
+/+ VolInc(): void = 0/
+/+ VolDec(): void = 0/
+/+ Stop(): void = 0/
+/+ Next(): void = 0/
+/+ Prev(): void = 0/
+/+ Select(std::string const&amp; name): void = 0/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>576</x><y>324</y><w>225</w><h>117</h></coordinates><panel_attributes>VideoPlayerAdapter
+--
++ Play(): void = 0
++ VolInc(): void = 0
++ VolDec(): void = 0
++ Stop(): void = 0
++ Next(): void = 0
++ Prev(): void = 0
++ Select(std::string const&amp; name): void = 0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>315</x><y>324</y><w>225</w><h>117</h></coordinates><panel_attributes>MusicPlayerAdapter
+--
++ Play(): void = 0
++ VolInc(): void = 0
++ VolDec(): void = 0
++ Stop(): void = 0
++ Next(): void = 0
++ Prev(): void = 0
++ Select(std::string const&amp; name): void = 0</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>801</x><y>549</y><w>117</w><h>54</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2= *
+- mVideos
+
+</panel_attributes><additional_attributes>10;20;110;20</additional_attributes></element><element><id>Relation</id><coordinates><x>216</x><y>549</y><w>117</w><h>54</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2= *
+- mSongs
+
+</panel_attributes><additional_attributes>110;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>549</x><y>252</y><w>27</w><h>63</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>414</x><y>288</y><w>297</w><h>54</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;40;10;10;310;10;310;40</additional_attributes></element><element><id>Relation</id><coordinates><x>801</x><y>657</y><w>117</w><h>36</h></coordinates><panel_attributes>lt=&lt;..
+&lt;&lt;use&gt;&gt;</panel_attributes><additional_attributes>110;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1008</x><y>558</y><w>198</w><h>153</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+- mFormat: VideoFormat</panel_attributes><additional_attributes>30;10;60;10;60;140;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>414</x><y>432</y><w>135</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+-mPlayer: MusicPlayer</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>684</x><y>432</y><w>144</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+- mPlayer: VideoPlayer</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>486</x><y>27</y><w>126</w><h>54</h></coordinates><panel_attributes>
+Object
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>72</y><w>207</w><h>270</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;210;40;210;280</additional_attributes></element><element><id>Relation</id><coordinates><x>378</x><y>99</y><w>189</w><h>243</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;250;10;10;190;10</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>99</y><w>126</w><h>459</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;10;120;10;120;490;100;490</additional_attributes></element><element><id>Relation</id><coordinates><x>279</x><y>99</y><w>126</w><h>459</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>120;10;10;10;10;490;40;490</additional_attributes></element><element><id>UMLClass</id><coordinates><x>882</x><y>144</y><w>117</w><h>99</h></coordinates><panel_attributes>
+PlayerClient
+
+--
+
++ Run(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>666</x><y>180</y><w>234</w><h>45</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+- mPlayer: IMediaPlayer</panel_attributes><additional_attributes>240;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>144</x><y>99</y><w>162</w><h>441</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>160;10;10;10;10;470</additional_attributes></element><element><id>Relation</id><coordinates><x>819</x><y>99</y><w>216</w><h>441</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;10;220;10;220;470</additional_attributes></element><element><id>Relation</id><coordinates><x>936</x><y>99</y><w>27</w><h>63</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element></diagram>
