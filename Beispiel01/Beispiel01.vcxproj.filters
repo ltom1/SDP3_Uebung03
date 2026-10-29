@@ -20,6 +20,9 @@
     <ClCompile Include="Song.cpp">
       <Filter>Implementation</Filter>
     </ClCompile>
+    <ClCompile Include="VideoFormat.cpp">
+      <Filter>Implementation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Implementation">

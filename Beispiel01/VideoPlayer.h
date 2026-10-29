@@ -8,37 +8,66 @@
 #include <vector>
 #include <memory>
 
+
+/// @author Thomas Lechner
+/// @date 29.10.2026
+/// @brief A video player for managing videos.
+/// 
+/// Holds multiple Video objects and lets you switch between them and play/stop them. Can adjust the volume of the video currently playing.
 class VideoPlayer : public Object
 {
 public:
+	/// @brief The default value for the volume.
 	static constexpr size_t DEFAULT_VOLUME = 8;
-	static constexpr size_t MIN_VOLUME = 0;
+	/// @brief The maximum value for the volume.
 	static constexpr size_t MAX_VOLUME = 50;
 
 	/// @brief std::unique_ptr of this class.
 	using UPtr = std::unique_ptr<VideoPlayer>;
 
-	//starts playing with the actual video in list
+	/// @brief Starts playing the currently selected Video.
 	void Play() const;
-	//stops playing
+	/// @brief Stops playing the currently playing Video.
 	void Stop() const;
-	//switches to first video in playlist and returns true, otherwise false if list is empty.
+
+	/// @brief Switches to the first Video in the playlist.
+	/// @returns false, when there are no Videos in the playlist; otherwise true.
 	bool First();
-	//switches to next video in playlist and returns true, otherwise false if last song is reached.
+	/// @brief Switches to the next Video in the playlist.
+	/// @returns false, when the last song is reached, otherwise true.
 	bool Next();
-	//returns index of actual video
+
+	/// @brief Get currently selected Video's index.
+	/// @returns The index of the currently selected Video.
 	size_t ActIndex() const;
-	//returns name of actual video
+	/// @brief Get currently selected Video's name.
+	/// @returns The name of the currently selected Video.
 	std::string const ActVideo() const;
-	//sets volume (min volume=0 and max volume=50)
+
+	/// @brief Sets the volume.
+	/// @param[in] vol The volume to change to.
+	/// 
+	/// If the provided volume is bigger than MAX_VOLUME, it is clamped to MAX_VOLUME.
 	void SetVolume(size_t const vol);
-	//gets actual volume
+	/// @brief Gets the volume.
+	/// @returns The current volume.
 	size_t GetVolume() const;
-	//adds a video to playlist
+
+	/// @brief Adds a Video to the playlist.
+	/// @param[in] name The name of the video.
+	/// @param[in] dur The duration of the video in minutes.
+	/// @param[in] format The video's VideoFormat.
 	void Add(std::string const& name, size_t const dur, VideoFormat const& format);
+
 private:
+	/// @brief The current volume.
 	size_t mVolume = VideoPlayer::DEFAULT_VOLUME;
+
+	/// @brief The playlist. 
 	std::vector<Video> mVideos;
+
+	/// @brief The index of the currently selected Video.
+	size_t mCurIdx = 0;
 };
 
 #endif

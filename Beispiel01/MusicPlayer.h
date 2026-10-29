@@ -12,7 +12,6 @@ class MusicPlayer : public Object
 {
 public:
 	static constexpr size_t DEFAULT_VOLUME = 15;
-	static constexpr size_t MIN_VOLUME = 0;
 	static constexpr size_t MAX_VOLUME = 100;
 
 	/// @brief std::unique_ptr of this class.

@@ -101,6 +101,7 @@
     <ClCompile Include="Song.cpp" />
     <ClCompile Include="Test.cpp" />
     <ClCompile Include="Video.cpp" />
+    <ClCompile Include="VideoFormat.cpp" />
     <ClCompile Include="VideoPlayer.cpp" />
     <ClCompile Include="VideoPlayerAdapter.cpp" />
   </ItemGroup>
