@@ -3,6 +3,8 @@
 
 #include "Object.h"
 
+#include <string>
+
 class Song : public Object
 {
 public:

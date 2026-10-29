@@ -50,7 +50,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>X64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -115,6 +115,7 @@
     <ClInclude Include="PlayerClient.h" />
     <ClInclude Include="Song.h" />
     <ClInclude Include="Video.h" />
+    <ClInclude Include="VideoFormat.h" />
     <ClInclude Include="VideoPlayer.h" />
     <ClInclude Include="VideoPlayerAdapter.h" />
   </ItemGroup>

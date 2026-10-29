@@ -1,7 +1,10 @@
 #ifndef VIDEO_H
 #define VIDEO_H
 
+#include "Object.h"
 #include "VideoFormat.h"
+
+#include <string>
 
 class Video : public Object
 {
