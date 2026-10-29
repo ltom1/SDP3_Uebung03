@@ -38,7 +38,7 @@ public:
 	void SetName(std::string const& name);
 
 	/// @brief String representation of the video.
-	/// @returns The video as a formatted string.
+	/// @returns The video as a formated string.
 	std::string ToString() const;
 
 private:

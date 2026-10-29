@@ -1,4 +1,5 @@
 #include "Video.h"
+#include "Song.h"
 
 Video::Video(std::string const& name, size_t const duration, VideoFormat const format) :
 	mName{ name },

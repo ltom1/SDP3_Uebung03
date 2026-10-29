@@ -1,7 +1,6 @@
 #include "VideoPlayer.h"
 
 #include <iostream>
-#include <cassert>
 
 // Player output.
 static std::string const cNoVideos = "no video in playlist!";
@@ -37,7 +36,7 @@ bool VideoPlayer::First()
 bool VideoPlayer::Next()
 {
 	// No videos left?
-	if (mCurIdx >= mVideos.size() - 1) return false;
+	if (mVideos.empty() || mCurIdx >= (mVideos.size() - 1)) return false;
 
 	++mCurIdx;
 	return true;

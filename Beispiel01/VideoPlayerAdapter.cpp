@@ -35,6 +35,7 @@ void VideoPlayerAdapter::Next()
 
 void VideoPlayerAdapter::Prev()
 {
+	/*
 	// Get current video index.
 	size_t const curIdx = mPlayer->ActIndex();
 
@@ -47,6 +48,21 @@ void VideoPlayerAdapter::Prev()
 	{
 		mPlayer->Next();
 	}
+	*/
+
+	size_t const curIdx = mPlayer->ActIndex();
+	if (curIdx == 0) {
+		while (mPlayer->Next()) {}
+	}
+	else
+	{
+		mPlayer->First();
+		for (size_t i = 0; i < curIdx - 1; ++i)
+		{
+			mPlayer->Next();
+		}
+	}
+
 }
 
 void VideoPlayerAdapter::Select(std::string const& name)
