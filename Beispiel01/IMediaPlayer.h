@@ -2,10 +2,15 @@
 #define MEDIAPLAYER_H
 
 #include <string>
+#include <memory>
 
 class IMediaPlayer
 {
 public:
+
+	/// @brief std::unique_ptr of this class.
+	using UPtr = std::unique_ptr<IMediaPlayer>;
+
 	virtual void Play() = 0;
 	virtual void VolInc() = 0;
 	virtual void VolDec() = 0;

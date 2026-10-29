@@ -98,7 +98,9 @@
   <ItemGroup>
     <ClCompile Include="MusicPlayer.cpp" />
     <ClCompile Include="MusicPlayerAdapter.cpp" />
+    <ClCompile Include="Song.cpp" />
     <ClCompile Include="Test.cpp" />
+    <ClCompile Include="Video.cpp" />
     <ClCompile Include="VideoPlayer.cpp" />
     <ClCompile Include="VideoPlayerAdapter.cpp" />
   </ItemGroup>
@@ -110,6 +112,9 @@
     <ClInclude Include="MusicPlayer.h" />
     <ClInclude Include="MusicPlayerAdapter.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="PlayerClient.h" />
+    <ClInclude Include="Song.h" />
+    <ClInclude Include="Video.h" />
     <ClInclude Include="VideoPlayer.h" />
     <ClInclude Include="VideoPlayerAdapter.h" />
   </ItemGroup>

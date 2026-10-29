@@ -2,6 +2,7 @@
 #define MUSICPLAYER_H
 
 #include "Object.h"
+#include "Song.h"
 
 #include <string>
 #include <vector>
@@ -10,6 +11,10 @@
 class MusicPlayer : public Object
 {
 public:
+	static constexpr size_t DEFAULT_VOLUME = 15;
+	static constexpr size_t MIN_VOLUME = 0;
+	static constexpr size_t MAX_VOLUME = 100;
+
 	/// @brief std::unique_ptr of this class.
 	using UPtr = std::unique_ptr<MusicPlayer>;
 
@@ -25,6 +30,7 @@ public:
 	bool Find(std::string const& name);
 	//gets count of songs in playlist
 	size_t GetCount() const;
+
 	//increases the volume relative to the actual volume
 	void IncreaseVol(size_t const vol);
 	//decreases the volume relative to the actual volume
@@ -33,11 +39,7 @@ public:
 	void Add(std::string const& name, size_t const dur);
 
 private:
-	struct Song {
-		std::string const name;
-		std::size_t const duration;
-	};
-
+	size_t mVolume = MusicPlayer::DEFAULT_VOLUME;
 	std::vector<Song> mSongs;
 };
 
