@@ -44,7 +44,7 @@ DOXYFILE_ENCODING      = UTF-8
 # anderen Stellen verwendet.
 # Der Standardwert ist: My Project.
 
-PROJECT_NAME           = Adressenverwaltung
+PROJECT_NAME           = Player-Schnittstelle
 
 # Das PROJECT_NUMBER-Tag kann verwendet werden, um eine Projekt- oder
 # Revisionsnummer einzugeben. Dies kann zum Archivieren der generierten
@@ -57,7 +57,7 @@ PROJECT_NUMBER         =
 # einen schnellen Überblick über den Zweck des Projekts geben sollte. Halten Sie
 # die Beschreibung kurz.
 
-PROJECT_BRIEF          = "SDP3 - Übung 2"
+PROJECT_BRIEF          = "SDP3 - Übung 3"
 
 # Mit dem PROJECT_LOGO-Tag kann man ein Logo oder Symbol angeben, das in die
 # Dokumentation aufgenommen wird. Die maximale Höhe des Logos sollte 55 Pixel
