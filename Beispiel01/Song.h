@@ -40,7 +40,7 @@ private:
 	/// @brief The name of the song.
 	std::string mName;
 	/// @brief The duration of the song in seconds.
-	size_t const mDuration;
+	size_t mDuration;
 };
 
 #endif

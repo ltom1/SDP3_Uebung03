@@ -32,6 +32,7 @@ void MusicPlayer::SwitchNext()
 		// set index to first song if actIndex is at last one
 		mActIndex = (mActIndex + 1) % numOfSongs; 
 	}
+	
 }
 
 size_t MusicPlayer::GetActIndex() const

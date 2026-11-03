@@ -231,6 +231,191 @@ TEST(VideoPlayer, MultipleVideos) {
 
 /////////////////////////////////////////////////
 
+TEST(Song, Test)
+{
+	Song song1("Hells Bells", 256);
+
+	EXPECT_EQ(song1.GetName(), "Hells Bells");
+	EXPECT_EQ(song1.GetDuration(), 256);
+
+	EXPECT_EQ(song1.ToString(), "Hells Bells (256 sec)");
+
+	song1.SetName("Stereo Madness");
+	EXPECT_EQ(song1.GetName(), "Stereo Madness");
+
+	Song const song2{ song1 };
+	EXPECT_EQ(song1.GetDuration(), song2.GetDuration());
+	EXPECT_EQ(song1.GetName(), song2.GetName());
+	EXPECT_EQ(song1.ToString(), song2.ToString());
+
+	Song const song3("Deadlocked", 90);
+	song1 = song3;
+
+	EXPECT_EQ(song1.GetDuration(), song3.GetDuration());
+	EXPECT_EQ(song1.GetName(), song3.GetName());
+	EXPECT_EQ(song1.ToString(), song3.ToString());
+	EXPECT_EQ(song1.ToString(), song3.ToString());
+}
+
+/////////////////////////////////////////////////
+
+TEST(MusicPlayer, Empty)
+{
+	MusicPlayer player;
+
+	string output = "";
+
+	CaptureStdout();
+	player.Start();
+	output = GetCapturedStdout();
+	cout << output;
+
+	EXPECT_EQ(output, "no song in playlist!\n");
+
+	CaptureStdout();
+	player.Stop();
+	output = GetCapturedStdout();
+	cout << output;
+
+	EXPECT_EQ(output, "no song in playlist!\n");
+
+	CaptureStdout();
+	player.SwitchNext();
+	output = GetCapturedStdout();
+	cout << output;
+
+	EXPECT_EQ(output, "");
+
+	EXPECT_EQ(player.GetActIndex(), 0);
+
+	EXPECT_EQ(player.Find("Hells Bells"), false);
+	EXPECT_EQ(player.GetActIndex(), 0);
+
+	EXPECT_EQ(player.GetCount(), 0);
+
+	player.IncreaseVol(5);
+	player.DecreaseVol(10);
+	// trust me, it's gonna work...
+
+
+}
+
+TEST(MusicPlayer, OneSong)
+{
+	MusicPlayer player;
+
+	string output = "";
+
+	player.Add("Hells Bells", 256);
+	EXPECT_EQ(player.GetActIndex(), 0);
+
+	CaptureStdout();
+	player.Start();
+	output = GetCapturedStdout();
+	cout << output;
+	EXPECT_EQ(output, "playing song number 1: Hells Bells (256 sec)\n");
+
+	CaptureStdout();
+	player.Stop();
+	output = GetCapturedStdout();
+	cout << output;
+	EXPECT_EQ(output, "stop song: Hells Bells (256 sec)\n");
+
+
+	player.SwitchNext();
+	EXPECT_EQ(player.GetActIndex(), 0);
+
+
+	CaptureStdout();
+	player.Start();
+	output = GetCapturedStdout();
+	cout << output;
+	EXPECT_EQ(output, "playing song number 1: Hells Bells (256 sec)\n");
+
+	CaptureStdout();
+	player.Stop();
+	output = GetCapturedStdout();
+	cout << output;
+	EXPECT_EQ(output, "stop song: Hells Bells (256 sec)\n");
+
+
+	EXPECT_EQ(player.Find("Hells Bells"), true);
+	EXPECT_EQ(player.GetActIndex(), 0);
+
+	EXPECT_EQ(player.Find("StereoMadness"), false);
+	EXPECT_EQ(player.GetActIndex(), 0);
+}
+
+TEST(MusicPlayer, MultipleSongs)
+{
+	MusicPlayer player;
+
+	string output = "";
+
+	player.Add("Hells Bells", 256);
+	player.Add("Stereomadness", 91);
+	player.Add("Clubstep", 92);
+	EXPECT_EQ(player.GetActIndex(), 0);
+
+	CaptureStdout();
+	player.Start();
+	output = GetCapturedStdout();
+	cout << output;
+	EXPECT_EQ(output, "playing song number 1: Hells Bells (256 sec)\n");
+
+	CaptureStdout();
+	player.Stop();
+	output = GetCapturedStdout();
+	cout << output;
+	EXPECT_EQ(output, "stop song: Hells Bells (256 sec)\n");
+
+
+	player.SwitchNext();
+	EXPECT_EQ(player.GetActIndex(), 1);
+
+
+	CaptureStdout();
+	player.Start();
+	output = GetCapturedStdout();
+	cout << output;
+	EXPECT_EQ(output, "playing song number 2: Stereomadness (91 sec)\n");
+
+	CaptureStdout();
+	player.Stop();
+	output = GetCapturedStdout();
+	cout << output;
+	EXPECT_EQ(output, "stop song: Stereomadness (91 sec)\n");
+
+
+	player.SwitchNext();
+	EXPECT_EQ(player.GetActIndex(), 2);
+
+
+	CaptureStdout();
+	player.Start();
+	output = GetCapturedStdout();
+	cout << output;
+	EXPECT_EQ(output, "playing song number 3: Clubstep (92 sec)\n");
+
+	CaptureStdout();
+	player.Stop();
+	output = GetCapturedStdout();
+	cout << output;
+	EXPECT_EQ(output, "stop song: Clubstep (92 sec)\n");
+
+	player.SwitchNext();
+	EXPECT_EQ(player.GetActIndex(), 0);
+
+
+	EXPECT_EQ(player.Find("Clubstep"), true);
+	EXPECT_EQ(player.GetActIndex(), 2);
+	EXPECT_EQ(player.Find("Slaughterhouse"), false);
+	EXPECT_EQ(player.GetActIndex(), 2);
+
+}
+
+/////////////////////////////////////////////////
+
 TEST(VideoPlayerAdapter, Empty) {
 	std::string output = "";
 	
@@ -325,4 +510,3 @@ TEST(MusicPlayerAdapter, Multiple) {
 	EXPECT_EQ(output, "### Test Stop/Play ###\nstop song: Media 1 (1 sec)\nplaying song number 1: Media 1 (1 sec)\nIncrease volume 110 times.\nDecrease volume 110 times.\n\n### Test Next/Prev ###\n- Wrap around to last:\nplaying song number 4: Media 2 (4 sec)\n- Wrap around to first:\nplaying song number 1: Media 1 (1 sec)\n- Switch through all entries:\nplaying song number 2: Media 2 (2 sec)\nplaying song number 3: Media 3 (3 sec)\nplaying song number 4: Media 2 (4 sec)\nplaying song number 1: Media 1 (1 sec)\nplaying song number 2: Media 2 (2 sec)\n\n### Test Select ###\n-- Search for \"Does not exist\":\nsong: Does not exist not found!\nplaying song number 2: Media 2 (2 sec)\nstop song: Media 2 (2 sec)\n\n-- Search for \"Media 1\":\nplaying song number 1: Media 1 (1 sec)\nstop song: Media 1 (1 sec)\n\n-- Search for \"Media 2\":\nplaying song number 2: Media 2 (2 sec)\nstop song: Media 2 (2 sec)\n\n-- Search for \"Media 2\" - Should find the same one again:\nplaying song number 2: Media 2 (2 sec)\nstop song: Media 2 (2 sec)\n");
 }
 
-/////////////////////////////////////////////////
