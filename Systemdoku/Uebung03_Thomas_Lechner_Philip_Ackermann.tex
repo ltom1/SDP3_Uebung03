@@ -91,8 +91,24 @@
 
 \section{Anforderungsdefinition (Systemspezifikation)}
 \subsection{MonkeySoft}
+Es soll ein Musik Player implementiert werden. Dieser kann mehrere Songs, bestehend aus Titel und Dauer in Sekunden in seiner Playlist speichern.\\
+Die Songs können abgespielt und das Abspielen wieder gestoppt werden. Es gibt auch die Möglichkeit, auf den nächsten Song zu wechseln, wenn alle Songs durch sind, wird wieder von vorne angefangen.\\
+Der Musik Player verfügt über eine Lautstärke (0 bis 100, standardmäßig 15), die erhöht und verringert werden kann.\\
+Neue Songs können hinzugefügt werden und es kann nach einem bestimmten Titel gesucht werden.\\
+Die Anzahl der Songs in der Playlist und der Index des aktuell ausgewählten Songs kann ermittelt werden.
+
 \subsection{DonkeySoft}
+Es soll ein Video Player implementiert werden. Dieser kann mehrere Videos, bestehend aus Titel, Video-Format (AVI, MKV oder WMV) und Dauer in Minuten in seiner Playlist speichern.\\
+Die Videos können abgespielt und das Abspielen wieder gestoppt werden. Es gibt auch die Möglichkeit, auf das nächste Video zu wechseln und wieder auf den Anfang zurückzuspringen.\\
+Der Musik Player verfügt über eine Lautstärke (0 bis 50, standardmäßig 8), die erhöht und verringert werden kann.\\
+Neue Videos können hinzugefügt werden.\\
+Der Titel und Index des aktuell ausgewählten Videos kann auch ermittelt werden.
+
 \subsection{HSDSoft}
+Es soll für einen Klienten die oben genannten Player in einem einheitlichen Format mit einer gemeinsamen Schnittstelle bereitgestellt werden. Mit dieser Schnittstelle können beide Player gestartet und gestoppt werden. Es kann zwischen Liedern/Videos vor und zurück gewechselt werden. Wird über den Anfang hinaus zurückgewechselt, springt der Player wieder zum Ende. Wird das Ende überschritten, so fängt er wieder von vorne an. Die Lautstärke kann auch immer um 1 erhöht/verringert werden, bis die minimale/maximale Lautstärke erreicht ist. Es kann auch ein ganz bestimmter Titel (sofern dieser existiert) basierend auf dem Namen ausgewählt werden.\\
+
+Das Hinzufügen neuer Medien ist über die Schnittstelle nicht möglich, sondern nur das Bedienen bereits ausgestatteter Player.\\
+
 
 \section{Systementwurf}
 
@@ -100,6 +116,18 @@
 \fig{Systemdoku/Images/MediaPlayer.png}{1.2}{Klassendiagramm \docproject}
 
 \subsection{Designentscheidungen}
+Um bei weiterer Ableitung der verwendeten Klassen bereits einen virtuellen Destruktor bereitzustellen, werden alle Klassen mit Ausnahme von Interfaces von einer gemeinsamen Object-Klasse mit virtuellem Destruktor abgeleitet.\\
+
+Da die Klasse Client eine einheitliche Schnittstelle von sowohl dem MusicPlayer als auch dem MediaPlayer benötigt, wird hier das Softwarepattern des Adapters angewandt. Hierbei werden für beide Klassen jeweils eine Adapter Klasse bereitgestellt, welche die gemeinsamen Funktionalitäten dem Client bereitstellen sollen. Diese Adapter erben von einem gemeinsamen Interface, damit auch später weitere Adapter für andere Klassen mit ähnlichen Funktionalitäten hinzugefügt werden können.
+Die Adapter Klassen müssen jeweils Objekte ihrer Klassen, die sie adaptieren aggregieren. So können auf deren Member über ihre Getter zugegriffen werden und auch andere bereitgestellte Methoden verwendet werden.\\
+
+\textbf{MusicPlayer:}\\
+Um den Zustand der Lautstärke, der über die vorgegebenen Methoden geändert werden soll zu speichern, wird ein Member verwendet. Ebenso wird ein Vector aus „Songs“ zur praktikablen Speicherung der Lieder verwendet. Die Klasse Songs wiederum beinhaltet Member zur Speicherung von Titel und Dauer. Es werden Getter-Methoden zum Lesen zu Verfügung gestellt. Das nachträgliche Ändern soll nur für den Namen möglich sein, da die Länge eines Songs als konstant angenommen wird.\\
+
+\textbf{VideoPlayer:}\\
+Ebenso wie im MusicPlayer muss auch hier der Zustand der Lautstärke und die einzelnen Videos gespeichert werden können. Für ein Video werden Member für Namen und Länge, aber auch für das Dateiformat benötigt. Die Werte für dieses Dateiformat, werden über ein Enum „Videoformat“ definiert.\\
+
+Hinweis: Die Adapter für den MusicPlayer und den VideoPlayer werden wie in der Angabe gefordert über die Klasse PlayerClient ausführlich getestet. Da einige Methoden der Klassen, die die Adapter aggregieren von den Adaptermethoden nicht verwendet werden, müssen diese Klassen (MusicPlayer, Song, VideoPlayer, Video) eigenen Unit-Tests unterzogen werden.\\
 
 \section{Dokumentation der Komponenten (Klassen)}
 

@@ -30,7 +30,7 @@ void VideoPlayer::Stop() const
 bool VideoPlayer::First()
 {
 	mCurIdx = 0;
-	return mVideos.empty();
+	return !mVideos.empty();
 }
 
 bool VideoPlayer::Next()
@@ -49,12 +49,14 @@ size_t VideoPlayer::ActIndex() const
 
 std::string const VideoPlayer::ActVideo() const
 {
+	if (mVideos.empty()) return "";
+
 	return mVideos.at(mCurIdx).GetName();
 }
 
 void VideoPlayer::SetVolume(size_t const vol)
 {
-	mVolume = vol % VideoPlayer::MAX_VOLUME;
+	mVolume = (vol > VideoPlayer::MAX_VOLUME) ? VideoPlayer::MAX_VOLUME : vol;
 }
 
 size_t VideoPlayer::GetVolume() const

@@ -35,21 +35,6 @@ void VideoPlayerAdapter::Next()
 
 void VideoPlayerAdapter::Prev()
 {
-	/*
-	// Get current video index.
-	size_t const curIdx = mPlayer->ActIndex();
-
-	if (curIdx == 0) return; // Already at first video or no videos at all.
-
-	mPlayer->First();
-
-	// Switch forward until the correct video is reached.
-	for (size_t i = 0; i < curIdx - 1; ++i)
-	{
-		mPlayer->Next();
-	}
-	*/
-
 	size_t const curIdx = mPlayer->ActIndex();
 	if (curIdx == 0) {
 		while (mPlayer->Next()) {}
@@ -67,13 +52,23 @@ void VideoPlayerAdapter::Prev()
 
 void VideoPlayerAdapter::Select(std::string const& name)
 {
+	size_t const oldIdx = mPlayer->ActIndex();
+
 	if (mPlayer->First()) // Player has videos.
 	{
 		do
 		{
 			if (mPlayer->ActVideo() == name) return; // Found!
 		} while (mPlayer->Next()); // Continue until end is reached.
+
+		// Was not found...
+		// ... go back to original idx.
+		mPlayer->First();
+		for (size_t i = 0; i < oldIdx; ++i)
+		{
+			mPlayer->Next();
+		}
 	}
 
-	std::cout << "video: " + name + " not found!";
+	std::cout << "video: " << name << " not found!" << std::endl;
 }

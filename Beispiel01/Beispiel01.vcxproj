@@ -30,7 +30,12 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings" />
   <ImportGroup Label="Shared" />
-  <ImportGroup Label="PropertySheets" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="x86.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="x64.props" />
+  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <ItemDefinitionGroup />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -98,6 +103,7 @@
   <ItemGroup>
     <ClCompile Include="MusicPlayer.cpp" />
     <ClCompile Include="MusicPlayerAdapter.cpp" />
+    <ClCompile Include="PlayerClient.cpp" />
     <ClCompile Include="Song.cpp" />
     <ClCompile Include="Test.cpp" />
     <ClCompile Include="Video.cpp" />
