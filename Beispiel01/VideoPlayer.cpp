@@ -57,6 +57,8 @@ std::string const VideoPlayer::ActVideo() const
 void VideoPlayer::SetVolume(size_t const vol)
 {
 	mVolume = (vol > VideoPlayer::MAX_VOLUME) ? VideoPlayer::MAX_VOLUME : vol;
+
+	std::cout << "volume is now -> " << mVolume << std::endl;
 }
 
 size_t VideoPlayer::GetVolume() const

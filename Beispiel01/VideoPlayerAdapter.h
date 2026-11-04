@@ -32,7 +32,7 @@ public:
 	void Next() override;
 	/// @brief Select the previous Video.
 	///
-	/// Does not wrap around when the beginning is reached.
+	/// Does wrap around when the beginning is reached.
 	void Prev() override;
 	/// @brief Select the Video based on a name.
 	/// @param[in] name The name of the Video to select.

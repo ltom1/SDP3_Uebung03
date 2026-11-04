@@ -1,0 +1,1926 @@
+Visual Leak Detector read settings from: C:\Program Files (x86)\Visual Leak Detector\vld.ini
+Visual Leak Detector Version 2.5.1 installed.
+Running main() from D:\a\_work\1\s\googletest\googletest\src\gtest_main.cc
+[==========] Running 19 tests from 8 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from VideoFormat
+[ RUN      ] VideoFormat.Test
+[       OK ] VideoFormat.Test (0 ms)
+[----------] 1 test from VideoFormat (0 ms total)
+
+[----------] 1 test from Video
+[ RUN      ] Video.Test
+[       OK ] Video.Test (1 ms)
+[----------] 1 test from Video (1 ms total)
+
+[----------] 3 tests from VideoPlayer
+[ RUN      ] VideoPlayer.Empty
+no video in playlist!
+no video in playlist!
+volume is now -> 0
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+[       OK ] VideoPlayer.Empty (4 ms)
+[ RUN      ] VideoPlayer.OneVideo
+stop video: Test [duration -> 123 min], AVI-Format
+playing video number 1: Test [duration -> 123 min], AVI-Format
+playing video number 1: Test [duration -> 123 min], AVI-Format
+stop video: Test [duration -> 123 min], AVI-Format
+playing video number 1: Test [duration -> 123 min], AVI-Format
+stop video: Test [duration -> 123 min], AVI-Format
+[       OK ] VideoPlayer.OneVideo (14 ms)
+[ RUN      ] VideoPlayer.MultipleVideos
+stop video: Video 1 [duration -> 1 min], AVI-Format
+playing video number 1: Video 1 [duration -> 1 min], AVI-Format
+playing video number 2: Video 2 [duration -> 2 min], MKV-Format
+stop video: Video 2 [duration -> 2 min], MKV-Format
+playing video number 3: Video 3 [duration -> 3 min], WMV-Format
+stop video: Video 3 [duration -> 3 min], WMV-Format
+playing video number 3: Video 3 [duration -> 3 min], WMV-Format
+stop video: Video 3 [duration -> 3 min], WMV-Format
+stop video: Video 1 [duration -> 1 min], AVI-Format
+playing video number 1: Video 1 [duration -> 1 min], AVI-Format
+[       OK ] VideoPlayer.MultipleVideos (21 ms)
+[----------] 3 tests from VideoPlayer (40 ms total)
+
+[----------] 1 test from Song
+[ RUN      ] Song.Test
+[       OK ] Song.Test (0 ms)
+[----------] 1 test from Song (1 ms total)
+
+[----------] 3 tests from MusicPlayer
+[ RUN      ] MusicPlayer.Empty
+no song in playlist!
+no song in playlist!
+volume is now -> 20
+volume is now -> 20
+volume is now -> 20
+volume is now -> 15
+volume is now -> 0
+volume is now -> 100
+[       OK ] MusicPlayer.Empty (17 ms)
+[ RUN      ] MusicPlayer.OneSong
+playing song number 1: Hells Bells (256 sec)
+stop song: Hells Bells (256 sec)
+playing song number 1: Hells Bells (256 sec)
+stop song: Hells Bells (256 sec)
+[       OK ] MusicPlayer.OneSong (8 ms)
+[ RUN      ] MusicPlayer.MultipleSongs
+playing song number 1: Hells Bells (256 sec)
+stop song: Hells Bells (256 sec)
+playing song number 2: Stereomadness (91 sec)
+stop song: Stereomadness (91 sec)
+playing song number 3: Clubstep (92 sec)
+stop song: Clubstep (92 sec)
+[       OK ] MusicPlayer.MultipleSongs (13 ms)
+[----------] 3 tests from MusicPlayer (39 ms total)
+
+[----------] 4 tests from VideoPlayerAdapter
+[ RUN      ] VideoPlayerAdapter.nullptr
+[       OK ] VideoPlayerAdapter.nullptr (0 ms)
+[ RUN      ] VideoPlayerAdapter.Empty
+### Test Stop/Play ###
+no video in playlist!
+no video in playlist!
+Increase volume 110 times.
+volume is now -> 9
+volume is now -> 10
+volume is now -> 11
+volume is now -> 12
+volume is now -> 13
+volume is now -> 14
+volume is now -> 15
+volume is now -> 16
+volume is now -> 17
+volume is now -> 18
+volume is now -> 19
+volume is now -> 20
+volume is now -> 21
+volume is now -> 22
+volume is now -> 23
+volume is now -> 24
+volume is now -> 25
+volume is now -> 26
+volume is now -> 27
+volume is now -> 28
+volume is now -> 29
+volume is now -> 30
+volume is now -> 31
+volume is now -> 32
+volume is now -> 33
+volume is now -> 34
+volume is now -> 35
+volume is now -> 36
+volume is now -> 37
+volume is now -> 38
+volume is now -> 39
+volume is now -> 40
+volume is now -> 41
+volume is now -> 42
+volume is now -> 43
+volume is now -> 44
+volume is now -> 45
+volume is now -> 46
+volume is now -> 47
+volume is now -> 48
+volume is now -> 49
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+Decrease volume 110 times.
+volume is now -> 49
+volume is now -> 48
+volume is now -> 47
+volume is now -> 46
+volume is now -> 45
+volume is now -> 44
+volume is now -> 43
+volume is now -> 42
+volume is now -> 41
+volume is now -> 40
+volume is now -> 39
+volume is now -> 38
+volume is now -> 37
+volume is now -> 36
+volume is now -> 35
+volume is now -> 34
+volume is now -> 33
+volume is now -> 32
+volume is now -> 31
+volume is now -> 30
+volume is now -> 29
+volume is now -> 28
+volume is now -> 27
+volume is now -> 26
+volume is now -> 25
+volume is now -> 24
+volume is now -> 23
+volume is now -> 22
+volume is now -> 21
+volume is now -> 20
+volume is now -> 19
+volume is now -> 18
+volume is now -> 17
+volume is now -> 16
+volume is now -> 15
+volume is now -> 14
+volume is now -> 13
+volume is now -> 12
+volume is now -> 11
+volume is now -> 10
+volume is now -> 9
+volume is now -> 8
+volume is now -> 7
+volume is now -> 6
+volume is now -> 5
+volume is now -> 4
+volume is now -> 3
+volume is now -> 2
+volume is now -> 1
+volume is now -> 0
+
+### Test Next/Prev ###
+- Wrap around to last:
+no video in playlist!
+- Wrap around to first:
+no video in playlist!
+- Switch through all entries:
+no video in playlist!
+no video in playlist!
+no video in playlist!
+no video in playlist!
+no video in playlist!
+
+### Test Select ###
+-- Search for "Does not exist":
+video: Does not exist not found!
+no video in playlist!
+no video in playlist!
+
+-- Search for "Media 1":
+video: Media 1 not found!
+no video in playlist!
+no video in playlist!
+
+-- Search for "Media 2":
+video: Media 2 not found!
+no video in playlist!
+no video in playlist!
+
+-- Search for "Media 2" - Should find the same one again:
+video: Media 2 not found!
+no video in playlist!
+no video in playlist!
+[       OK ] VideoPlayerAdapter.Empty (13 ms)
+[ RUN      ] VideoPlayerAdapter.One
+### Test Stop/Play ###
+stop video: Media 1 [duration -> 1 min], MKV-Format
+playing video number 1: Media 1 [duration -> 1 min], MKV-Format
+Increase volume 110 times.
+volume is now -> 9
+volume is now -> 10
+volume is now -> 11
+volume is now -> 12
+volume is now -> 13
+volume is now -> 14
+volume is now -> 15
+volume is now -> 16
+volume is now -> 17
+volume is now -> 18
+volume is now -> 19
+volume is now -> 20
+volume is now -> 21
+volume is now -> 22
+volume is now -> 23
+volume is now -> 24
+volume is now -> 25
+volume is now -> 26
+volume is now -> 27
+volume is now -> 28
+volume is now -> 29
+volume is now -> 30
+volume is now -> 31
+volume is now -> 32
+volume is now -> 33
+volume is now -> 34
+volume is now -> 35
+volume is now -> 36
+volume is now -> 37
+volume is now -> 38
+volume is now -> 39
+volume is now -> 40
+volume is now -> 41
+volume is now -> 42
+volume is now -> 43
+volume is now -> 44
+volume is now -> 45
+volume is now -> 46
+volume is now -> 47
+volume is now -> 48
+volume is now -> 49
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+Decrease volume 110 times.
+volume is now -> 49
+volume is now -> 48
+volume is now -> 47
+volume is now -> 46
+volume is now -> 45
+volume is now -> 44
+volume is now -> 43
+volume is now -> 42
+volume is now -> 41
+volume is now -> 40
+volume is now -> 39
+volume is now -> 38
+volume is now -> 37
+volume is now -> 36
+volume is now -> 35
+volume is now -> 34
+volume is now -> 33
+volume is now -> 32
+volume is now -> 31
+volume is now -> 30
+volume is now -> 29
+volume is now -> 28
+volume is now -> 27
+volume is now -> 26
+volume is now -> 25
+volume is now -> 24
+volume is now -> 23
+volume is now -> 22
+volume is now -> 21
+volume is now -> 20
+volume is now -> 19
+volume is now -> 18
+volume is now -> 17
+volume is now -> 16
+volume is now -> 15
+volume is now -> 14
+volume is now -> 13
+volume is now -> 12
+volume is now -> 11
+volume is now -> 10
+volume is now -> 9
+volume is now -> 8
+volume is now -> 7
+volume is now -> 6
+volume is now -> 5
+volume is now -> 4
+volume is now -> 3
+volume is now -> 2
+volume is now -> 1
+volume is now -> 0
+
+### Test Next/Prev ###
+- Wrap around to last:
+playing video number 1: Media 1 [duration -> 1 min], MKV-Format
+- Wrap around to first:
+playing video number 1: Media 1 [duration -> 1 min], MKV-Format
+- Switch through all entries:
+playing video number 1: Media 1 [duration -> 1 min], MKV-Format
+playing video number 1: Media 1 [duration -> 1 min], MKV-Format
+playing video number 1: Media 1 [duration -> 1 min], MKV-Format
+playing video number 1: Media 1 [duration -> 1 min], MKV-Format
+playing video number 1: Media 1 [duration -> 1 min], MKV-Format
+
+### Test Select ###
+-- Search for "Does not exist":
+video: Does not exist not found!
+playing video number 1: Media 1 [duration -> 1 min], MKV-Format
+stop video: Media 1 [duration -> 1 min], MKV-Format
+
+-- Search for "Media 1":
+playing video number 1: Media 1 [duration -> 1 min], MKV-Format
+stop video: Media 1 [duration -> 1 min], MKV-Format
+
+-- Search for "Media 2":
+video: Media 2 not found!
+playing video number 1: Media 1 [duration -> 1 min], MKV-Format
+stop video: Media 1 [duration -> 1 min], MKV-Format
+
+-- Search for "Media 2" - Should find the same one again:
+video: Media 2 not found!
+playing video number 1: Media 1 [duration -> 1 min], MKV-Format
+stop video: Media 1 [duration -> 1 min], MKV-Format
+[       OK ] VideoPlayerAdapter.One (7 ms)
+[ RUN      ] VideoPlayerAdapter.Multiple
+### Test Stop/Play ###
+stop video: Media 1 [duration -> 1 min], MKV-Format
+playing video number 1: Media 1 [duration -> 1 min], MKV-Format
+Increase volume 110 times.
+volume is now -> 9
+volume is now -> 10
+volume is now -> 11
+volume is now -> 12
+volume is now -> 13
+volume is now -> 14
+volume is now -> 15
+volume is now -> 16
+volume is now -> 17
+volume is now -> 18
+volume is now -> 19
+volume is now -> 20
+volume is now -> 21
+volume is now -> 22
+volume is now -> 23
+volume is now -> 24
+volume is now -> 25
+volume is now -> 26
+volume is now -> 27
+volume is now -> 28
+volume is now -> 29
+volume is now -> 30
+volume is now -> 31
+volume is now -> 32
+volume is now -> 33
+volume is now -> 34
+volume is now -> 35
+volume is now -> 36
+volume is now -> 37
+volume is now -> 38
+volume is now -> 39
+volume is now -> 40
+volume is now -> 41
+volume is now -> 42
+volume is now -> 43
+volume is now -> 44
+volume is now -> 45
+volume is now -> 46
+volume is now -> 47
+volume is now -> 48
+volume is now -> 49
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+Decrease volume 110 times.
+volume is now -> 49
+volume is now -> 48
+volume is now -> 47
+volume is now -> 46
+volume is now -> 45
+volume is now -> 44
+volume is now -> 43
+volume is now -> 42
+volume is now -> 41
+volume is now -> 40
+volume is now -> 39
+volume is now -> 38
+volume is now -> 37
+volume is now -> 36
+volume is now -> 35
+volume is now -> 34
+volume is now -> 33
+volume is now -> 32
+volume is now -> 31
+volume is now -> 30
+volume is now -> 29
+volume is now -> 28
+volume is now -> 27
+volume is now -> 26
+volume is now -> 25
+volume is now -> 24
+volume is now -> 23
+volume is now -> 22
+volume is now -> 21
+volume is now -> 20
+volume is now -> 19
+volume is now -> 18
+volume is now -> 17
+volume is now -> 16
+volume is now -> 15
+volume is now -> 14
+volume is now -> 13
+volume is now -> 12
+volume is now -> 11
+volume is now -> 10
+volume is now -> 9
+volume is now -> 8
+volume is now -> 7
+volume is now -> 6
+volume is now -> 5
+volume is now -> 4
+volume is now -> 3
+volume is now -> 2
+volume is now -> 1
+volume is now -> 0
+
+### Test Next/Prev ###
+- Wrap around to last:
+playing video number 4: Media 2 [duration -> 4 min], MKV-Format
+- Wrap around to first:
+playing video number 1: Media 1 [duration -> 1 min], MKV-Format
+- Switch through all entries:
+playing video number 2: Media 2 [duration -> 2 min], AVI-Format
+playing video number 3: Media 3 [duration -> 3 min], WMV-Format
+playing video number 4: Media 2 [duration -> 4 min], MKV-Format
+playing video number 1: Media 1 [duration -> 1 min], MKV-Format
+playing video number 2: Media 2 [duration -> 2 min], AVI-Format
+
+### Test Select ###
+-- Search for "Does not exist":
+video: Does not exist not found!
+playing video number 2: Media 2 [duration -> 2 min], AVI-Format
+stop video: Media 2 [duration -> 2 min], AVI-Format
+
+-- Search for "Media 1":
+playing video number 1: Media 1 [duration -> 1 min], MKV-Format
+stop video: Media 1 [duration -> 1 min], MKV-Format
+
+-- Search for "Media 2":
+playing video number 2: Media 2 [duration -> 2 min], AVI-Format
+stop video: Media 2 [duration -> 2 min], AVI-Format
+
+-- Search for "Media 2" - Should find the same one again:
+playing video number 2: Media 2 [duration -> 2 min], AVI-Format
+stop video: Media 2 [duration -> 2 min], AVI-Format
+[       OK ] VideoPlayerAdapter.Multiple (6 ms)
+[----------] 4 tests from VideoPlayerAdapter (27 ms total)
+
+[----------] 4 tests from MusicPlayerAdapter
+[ RUN      ] MusicPlayerAdapter.nullptr
+[       OK ] MusicPlayerAdapter.nullptr (0 ms)
+[ RUN      ] MusicPlayerAdapter.Empty
+### Test Stop/Play ###
+no song in playlist!
+no song in playlist!
+Increase volume 110 times.
+volume is now -> 16
+volume is now -> 17
+volume is now -> 18
+volume is now -> 19
+volume is now -> 20
+volume is now -> 21
+volume is now -> 22
+volume is now -> 23
+volume is now -> 24
+volume is now -> 25
+volume is now -> 26
+volume is now -> 27
+volume is now -> 28
+volume is now -> 29
+volume is now -> 30
+volume is now -> 31
+volume is now -> 32
+volume is now -> 33
+volume is now -> 34
+volume is now -> 35
+volume is now -> 36
+volume is now -> 37
+volume is now -> 38
+volume is now -> 39
+volume is now -> 40
+volume is now -> 41
+volume is now -> 42
+volume is now -> 43
+volume is now -> 44
+volume is now -> 45
+volume is now -> 46
+volume is now -> 47
+volume is now -> 48
+volume is now -> 49
+volume is now -> 50
+volume is now -> 51
+volume is now -> 52
+volume is now -> 53
+volume is now -> 54
+volume is now -> 55
+volume is now -> 56
+volume is now -> 57
+volume is now -> 58
+volume is now -> 59
+volume is now -> 60
+volume is now -> 61
+volume is now -> 62
+volume is now -> 63
+volume is now -> 64
+volume is now -> 65
+volume is now -> 66
+volume is now -> 67
+volume is now -> 68
+volume is now -> 69
+volume is now -> 70
+volume is now -> 71
+volume is now -> 72
+volume is now -> 73
+volume is now -> 74
+volume is now -> 75
+volume is now -> 76
+volume is now -> 77
+volume is now -> 78
+volume is now -> 79
+volume is now -> 80
+volume is now -> 81
+volume is now -> 82
+volume is now -> 83
+volume is now -> 84
+volume is now -> 85
+volume is now -> 86
+volume is now -> 87
+volume is now -> 88
+volume is now -> 89
+volume is now -> 90
+volume is now -> 91
+volume is now -> 92
+volume is now -> 93
+volume is now -> 94
+volume is now -> 95
+volume is now -> 96
+volume is now -> 97
+volume is now -> 98
+volume is now -> 99
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+Decrease volume 110 times.
+volume is now -> 99
+volume is now -> 98
+volume is now -> 97
+volume is now -> 96
+volume is now -> 95
+volume is now -> 94
+volume is now -> 93
+volume is now -> 92
+volume is now -> 91
+volume is now -> 90
+volume is now -> 89
+volume is now -> 88
+volume is now -> 87
+volume is now -> 86
+volume is now -> 85
+volume is now -> 84
+volume is now -> 83
+volume is now -> 82
+volume is now -> 81
+volume is now -> 80
+volume is now -> 79
+volume is now -> 78
+volume is now -> 77
+volume is now -> 76
+volume is now -> 75
+volume is now -> 74
+volume is now -> 73
+volume is now -> 72
+volume is now -> 71
+volume is now -> 70
+volume is now -> 69
+volume is now -> 68
+volume is now -> 67
+volume is now -> 66
+volume is now -> 65
+volume is now -> 64
+volume is now -> 63
+volume is now -> 62
+volume is now -> 61
+volume is now -> 60
+volume is now -> 59
+volume is now -> 58
+volume is now -> 57
+volume is now -> 56
+volume is now -> 55
+volume is now -> 54
+volume is now -> 53
+volume is now -> 52
+volume is now -> 51
+volume is now -> 50
+volume is now -> 49
+volume is now -> 48
+volume is now -> 47
+volume is now -> 46
+volume is now -> 45
+volume is now -> 44
+volume is now -> 43
+volume is now -> 42
+volume is now -> 41
+volume is now -> 40
+volume is now -> 39
+volume is now -> 38
+volume is now -> 37
+volume is now -> 36
+volume is now -> 35
+volume is now -> 34
+volume is now -> 33
+volume is now -> 32
+volume is now -> 31
+volume is now -> 30
+volume is now -> 29
+volume is now -> 28
+volume is now -> 27
+volume is now -> 26
+volume is now -> 25
+volume is now -> 24
+volume is now -> 23
+volume is now -> 22
+volume is now -> 21
+volume is now -> 20
+volume is now -> 19
+volume is now -> 18
+volume is now -> 17
+volume is now -> 16
+volume is now -> 15
+volume is now -> 14
+volume is now -> 13
+volume is now -> 12
+volume is now -> 11
+volume is now -> 10
+volume is now -> 9
+volume is now -> 8
+volume is now -> 7
+volume is now -> 6
+volume is now -> 5
+volume is now -> 4
+volume is now -> 3
+volume is now -> 2
+volume is now -> 1
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+
+### Test Next/Prev ###
+- Wrap around to last:
+no song in playlist!
+- Wrap around to first:
+no song in playlist!
+- Switch through all entries:
+no song in playlist!
+no song in playlist!
+no song in playlist!
+no song in playlist!
+no song in playlist!
+
+### Test Select ###
+-- Search for "Does not exist":
+song: Does not exist not found!
+no song in playlist!
+no song in playlist!
+
+-- Search for "Media 1":
+song: Media 1 not found!
+no song in playlist!
+no song in playlist!
+
+-- Search for "Media 2":
+song: Media 2 not found!
+no song in playlist!
+no song in playlist!
+
+-- Search for "Media 2" - Should find the same one again:
+song: Media 2 not found!
+no song in playlist!
+no song in playlist!
+[       OK ] MusicPlayerAdapter.Empty (6 ms)
+[ RUN      ] MusicPlayerAdapter.One
+### Test Stop/Play ###
+stop song: Media 1 (1 sec)
+playing song number 1: Media 1 (1 sec)
+Increase volume 110 times.
+volume is now -> 16
+volume is now -> 17
+volume is now -> 18
+volume is now -> 19
+volume is now -> 20
+volume is now -> 21
+volume is now -> 22
+volume is now -> 23
+volume is now -> 24
+volume is now -> 25
+volume is now -> 26
+volume is now -> 27
+volume is now -> 28
+volume is now -> 29
+volume is now -> 30
+volume is now -> 31
+volume is now -> 32
+volume is now -> 33
+volume is now -> 34
+volume is now -> 35
+volume is now -> 36
+volume is now -> 37
+volume is now -> 38
+volume is now -> 39
+volume is now -> 40
+volume is now -> 41
+volume is now -> 42
+volume is now -> 43
+volume is now -> 44
+volume is now -> 45
+volume is now -> 46
+volume is now -> 47
+volume is now -> 48
+volume is now -> 49
+volume is now -> 50
+volume is now -> 51
+volume is now -> 52
+volume is now -> 53
+volume is now -> 54
+volume is now -> 55
+volume is now -> 56
+volume is now -> 57
+volume is now -> 58
+volume is now -> 59
+volume is now -> 60
+volume is now -> 61
+volume is now -> 62
+volume is now -> 63
+volume is now -> 64
+volume is now -> 65
+volume is now -> 66
+volume is now -> 67
+volume is now -> 68
+volume is now -> 69
+volume is now -> 70
+volume is now -> 71
+volume is now -> 72
+volume is now -> 73
+volume is now -> 74
+volume is now -> 75
+volume is now -> 76
+volume is now -> 77
+volume is now -> 78
+volume is now -> 79
+volume is now -> 80
+volume is now -> 81
+volume is now -> 82
+volume is now -> 83
+volume is now -> 84
+volume is now -> 85
+volume is now -> 86
+volume is now -> 87
+volume is now -> 88
+volume is now -> 89
+volume is now -> 90
+volume is now -> 91
+volume is now -> 92
+volume is now -> 93
+volume is now -> 94
+volume is now -> 95
+volume is now -> 96
+volume is now -> 97
+volume is now -> 98
+volume is now -> 99
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+Decrease volume 110 times.
+volume is now -> 99
+volume is now -> 98
+volume is now -> 97
+volume is now -> 96
+volume is now -> 95
+volume is now -> 94
+volume is now -> 93
+volume is now -> 92
+volume is now -> 91
+volume is now -> 90
+volume is now -> 89
+volume is now -> 88
+volume is now -> 87
+volume is now -> 86
+volume is now -> 85
+volume is now -> 84
+volume is now -> 83
+volume is now -> 82
+volume is now -> 81
+volume is now -> 80
+volume is now -> 79
+volume is now -> 78
+volume is now -> 77
+volume is now -> 76
+volume is now -> 75
+volume is now -> 74
+volume is now -> 73
+volume is now -> 72
+volume is now -> 71
+volume is now -> 70
+volume is now -> 69
+volume is now -> 68
+volume is now -> 67
+volume is now -> 66
+volume is now -> 65
+volume is now -> 64
+volume is now -> 63
+volume is now -> 62
+volume is now -> 61
+volume is now -> 60
+volume is now -> 59
+volume is now -> 58
+volume is now -> 57
+volume is now -> 56
+volume is now -> 55
+volume is now -> 54
+volume is now -> 53
+volume is now -> 52
+volume is now -> 51
+volume is now -> 50
+volume is now -> 49
+volume is now -> 48
+volume is now -> 47
+volume is now -> 46
+volume is now -> 45
+volume is now -> 44
+volume is now -> 43
+volume is now -> 42
+volume is now -> 41
+volume is now -> 40
+volume is now -> 39
+volume is now -> 38
+volume is now -> 37
+volume is now -> 36
+volume is now -> 35
+volume is now -> 34
+volume is now -> 33
+volume is now -> 32
+volume is now -> 31
+volume is now -> 30
+volume is now -> 29
+volume is now -> 28
+volume is now -> 27
+volume is now -> 26
+volume is now -> 25
+volume is now -> 24
+volume is now -> 23
+volume is now -> 22
+volume is now -> 21
+volume is now -> 20
+volume is now -> 19
+volume is now -> 18
+volume is now -> 17
+volume is now -> 16
+volume is now -> 15
+volume is now -> 14
+volume is now -> 13
+volume is now -> 12
+volume is now -> 11
+volume is now -> 10
+volume is now -> 9
+volume is now -> 8
+volume is now -> 7
+volume is now -> 6
+volume is now -> 5
+volume is now -> 4
+volume is now -> 3
+volume is now -> 2
+volume is now -> 1
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+
+### Test Next/Prev ###
+- Wrap around to last:
+playing song number 1: Media 1 (1 sec)
+- Wrap around to first:
+playing song number 1: Media 1 (1 sec)
+- Switch through all entries:
+playing song number 1: Media 1 (1 sec)
+playing song number 1: Media 1 (1 sec)
+playing song number 1: Media 1 (1 sec)
+playing song number 1: Media 1 (1 sec)
+playing song number 1: Media 1 (1 sec)
+
+### Test Select ###
+-- Search for "Does not exist":
+song: Does not exist not found!
+playing song number 1: Media 1 (1 sec)
+stop song: Media 1 (1 sec)
+
+-- Search for "Media 1":
+playing song number 1: Media 1 (1 sec)
+stop song: Media 1 (1 sec)
+
+-- Search for "Media 2":
+song: Media 2 not found!
+playing song number 1: Media 1 (1 sec)
+stop song: Media 1 (1 sec)
+
+-- Search for "Media 2" - Should find the same one again:
+song: Media 2 not found!
+playing song number 1: Media 1 (1 sec)
+stop song: Media 1 (1 sec)
+[       OK ] MusicPlayerAdapter.One (6 ms)
+[ RUN      ] MusicPlayerAdapter.Multiple
+### Test Stop/Play ###
+stop song: Media 1 (1 sec)
+playing song number 1: Media 1 (1 sec)
+Increase volume 110 times.
+volume is now -> 16
+volume is now -> 17
+volume is now -> 18
+volume is now -> 19
+volume is now -> 20
+volume is now -> 21
+volume is now -> 22
+volume is now -> 23
+volume is now -> 24
+volume is now -> 25
+volume is now -> 26
+volume is now -> 27
+volume is now -> 28
+volume is now -> 29
+volume is now -> 30
+volume is now -> 31
+volume is now -> 32
+volume is now -> 33
+volume is now -> 34
+volume is now -> 35
+volume is now -> 36
+volume is now -> 37
+volume is now -> 38
+volume is now -> 39
+volume is now -> 40
+volume is now -> 41
+volume is now -> 42
+volume is now -> 43
+volume is now -> 44
+volume is now -> 45
+volume is now -> 46
+volume is now -> 47
+volume is now -> 48
+volume is now -> 49
+volume is now -> 50
+volume is now -> 51
+volume is now -> 52
+volume is now -> 53
+volume is now -> 54
+volume is now -> 55
+volume is now -> 56
+volume is now -> 57
+volume is now -> 58
+volume is now -> 59
+volume is now -> 60
+volume is now -> 61
+volume is now -> 62
+volume is now -> 63
+volume is now -> 64
+volume is now -> 65
+volume is now -> 66
+volume is now -> 67
+volume is now -> 68
+volume is now -> 69
+volume is now -> 70
+volume is now -> 71
+volume is now -> 72
+volume is now -> 73
+volume is now -> 74
+volume is now -> 75
+volume is now -> 76
+volume is now -> 77
+volume is now -> 78
+volume is now -> 79
+volume is now -> 80
+volume is now -> 81
+volume is now -> 82
+volume is now -> 83
+volume is now -> 84
+volume is now -> 85
+volume is now -> 86
+volume is now -> 87
+volume is now -> 88
+volume is now -> 89
+volume is now -> 90
+volume is now -> 91
+volume is now -> 92
+volume is now -> 93
+volume is now -> 94
+volume is now -> 95
+volume is now -> 96
+volume is now -> 97
+volume is now -> 98
+volume is now -> 99
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+Decrease volume 110 times.
+volume is now -> 99
+volume is now -> 98
+volume is now -> 97
+volume is now -> 96
+volume is now -> 95
+volume is now -> 94
+volume is now -> 93
+volume is now -> 92
+volume is now -> 91
+volume is now -> 90
+volume is now -> 89
+volume is now -> 88
+volume is now -> 87
+volume is now -> 86
+volume is now -> 85
+volume is now -> 84
+volume is now -> 83
+volume is now -> 82
+volume is now -> 81
+volume is now -> 80
+volume is now -> 79
+volume is now -> 78
+volume is now -> 77
+volume is now -> 76
+volume is now -> 75
+volume is now -> 74
+volume is now -> 73
+volume is now -> 72
+volume is now -> 71
+volume is now -> 70
+volume is now -> 69
+volume is now -> 68
+volume is now -> 67
+volume is now -> 66
+volume is now -> 65
+volume is now -> 64
+volume is now -> 63
+volume is now -> 62
+volume is now -> 61
+volume is now -> 60
+volume is now -> 59
+volume is now -> 58
+volume is now -> 57
+volume is now -> 56
+volume is now -> 55
+volume is now -> 54
+volume is now -> 53
+volume is now -> 52
+volume is now -> 51
+volume is now -> 50
+volume is now -> 49
+volume is now -> 48
+volume is now -> 47
+volume is now -> 46
+volume is now -> 45
+volume is now -> 44
+volume is now -> 43
+volume is now -> 42
+volume is now -> 41
+volume is now -> 40
+volume is now -> 39
+volume is now -> 38
+volume is now -> 37
+volume is now -> 36
+volume is now -> 35
+volume is now -> 34
+volume is now -> 33
+volume is now -> 32
+volume is now -> 31
+volume is now -> 30
+volume is now -> 29
+volume is now -> 28
+volume is now -> 27
+volume is now -> 26
+volume is now -> 25
+volume is now -> 24
+volume is now -> 23
+volume is now -> 22
+volume is now -> 21
+volume is now -> 20
+volume is now -> 19
+volume is now -> 18
+volume is now -> 17
+volume is now -> 16
+volume is now -> 15
+volume is now -> 14
+volume is now -> 13
+volume is now -> 12
+volume is now -> 11
+volume is now -> 10
+volume is now -> 9
+volume is now -> 8
+volume is now -> 7
+volume is now -> 6
+volume is now -> 5
+volume is now -> 4
+volume is now -> 3
+volume is now -> 2
+volume is now -> 1
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+
+### Test Next/Prev ###
+- Wrap around to last:
+playing song number 4: Media 2 (4 sec)
+- Wrap around to first:
+playing song number 1: Media 1 (1 sec)
+- Switch through all entries:
+playing song number 2: Media 2 (2 sec)
+playing song number 3: Media 3 (3 sec)
+playing song number 4: Media 2 (4 sec)
+playing song number 1: Media 1 (1 sec)
+playing song number 2: Media 2 (2 sec)
+
+### Test Select ###
+-- Search for "Does not exist":
+song: Does not exist not found!
+playing song number 2: Media 2 (2 sec)
+stop song: Media 2 (2 sec)
+
+-- Search for "Media 1":
+playing song number 1: Media 1 (1 sec)
+stop song: Media 1 (1 sec)
+
+-- Search for "Media 2":
+playing song number 2: Media 2 (2 sec)
+stop song: Media 2 (2 sec)
+
+-- Search for "Media 2" - Should find the same one again:
+playing song number 2: Media 2 (2 sec)
+stop song: Media 2 (2 sec)
+[       OK ] MusicPlayerAdapter.Multiple (7 ms)
+[----------] 4 tests from MusicPlayerAdapter (21 ms total)
+
+[----------] 2 tests from PlayerClient
+[ RUN      ] PlayerClient.nullptr
+[       OK ] PlayerClient.nullptr (0 ms)
+[ RUN      ] PlayerClient.SetPlayer
+### Test Stop/Play ###
+no song in playlist!
+no song in playlist!
+Increase volume 110 times.
+volume is now -> 16
+volume is now -> 17
+volume is now -> 18
+volume is now -> 19
+volume is now -> 20
+volume is now -> 21
+volume is now -> 22
+volume is now -> 23
+volume is now -> 24
+volume is now -> 25
+volume is now -> 26
+volume is now -> 27
+volume is now -> 28
+volume is now -> 29
+volume is now -> 30
+volume is now -> 31
+volume is now -> 32
+volume is now -> 33
+volume is now -> 34
+volume is now -> 35
+volume is now -> 36
+volume is now -> 37
+volume is now -> 38
+volume is now -> 39
+volume is now -> 40
+volume is now -> 41
+volume is now -> 42
+volume is now -> 43
+volume is now -> 44
+volume is now -> 45
+volume is now -> 46
+volume is now -> 47
+volume is now -> 48
+volume is now -> 49
+volume is now -> 50
+volume is now -> 51
+volume is now -> 52
+volume is now -> 53
+volume is now -> 54
+volume is now -> 55
+volume is now -> 56
+volume is now -> 57
+volume is now -> 58
+volume is now -> 59
+volume is now -> 60
+volume is now -> 61
+volume is now -> 62
+volume is now -> 63
+volume is now -> 64
+volume is now -> 65
+volume is now -> 66
+volume is now -> 67
+volume is now -> 68
+volume is now -> 69
+volume is now -> 70
+volume is now -> 71
+volume is now -> 72
+volume is now -> 73
+volume is now -> 74
+volume is now -> 75
+volume is now -> 76
+volume is now -> 77
+volume is now -> 78
+volume is now -> 79
+volume is now -> 80
+volume is now -> 81
+volume is now -> 82
+volume is now -> 83
+volume is now -> 84
+volume is now -> 85
+volume is now -> 86
+volume is now -> 87
+volume is now -> 88
+volume is now -> 89
+volume is now -> 90
+volume is now -> 91
+volume is now -> 92
+volume is now -> 93
+volume is now -> 94
+volume is now -> 95
+volume is now -> 96
+volume is now -> 97
+volume is now -> 98
+volume is now -> 99
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+volume is now -> 100
+Decrease volume 110 times.
+volume is now -> 99
+volume is now -> 98
+volume is now -> 97
+volume is now -> 96
+volume is now -> 95
+volume is now -> 94
+volume is now -> 93
+volume is now -> 92
+volume is now -> 91
+volume is now -> 90
+volume is now -> 89
+volume is now -> 88
+volume is now -> 87
+volume is now -> 86
+volume is now -> 85
+volume is now -> 84
+volume is now -> 83
+volume is now -> 82
+volume is now -> 81
+volume is now -> 80
+volume is now -> 79
+volume is now -> 78
+volume is now -> 77
+volume is now -> 76
+volume is now -> 75
+volume is now -> 74
+volume is now -> 73
+volume is now -> 72
+volume is now -> 71
+volume is now -> 70
+volume is now -> 69
+volume is now -> 68
+volume is now -> 67
+volume is now -> 66
+volume is now -> 65
+volume is now -> 64
+volume is now -> 63
+volume is now -> 62
+volume is now -> 61
+volume is now -> 60
+volume is now -> 59
+volume is now -> 58
+volume is now -> 57
+volume is now -> 56
+volume is now -> 55
+volume is now -> 54
+volume is now -> 53
+volume is now -> 52
+volume is now -> 51
+volume is now -> 50
+volume is now -> 49
+volume is now -> 48
+volume is now -> 47
+volume is now -> 46
+volume is now -> 45
+volume is now -> 44
+volume is now -> 43
+volume is now -> 42
+volume is now -> 41
+volume is now -> 40
+volume is now -> 39
+volume is now -> 38
+volume is now -> 37
+volume is now -> 36
+volume is now -> 35
+volume is now -> 34
+volume is now -> 33
+volume is now -> 32
+volume is now -> 31
+volume is now -> 30
+volume is now -> 29
+volume is now -> 28
+volume is now -> 27
+volume is now -> 26
+volume is now -> 25
+volume is now -> 24
+volume is now -> 23
+volume is now -> 22
+volume is now -> 21
+volume is now -> 20
+volume is now -> 19
+volume is now -> 18
+volume is now -> 17
+volume is now -> 16
+volume is now -> 15
+volume is now -> 14
+volume is now -> 13
+volume is now -> 12
+volume is now -> 11
+volume is now -> 10
+volume is now -> 9
+volume is now -> 8
+volume is now -> 7
+volume is now -> 6
+volume is now -> 5
+volume is now -> 4
+volume is now -> 3
+volume is now -> 2
+volume is now -> 1
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+volume is now -> 0
+
+### Test Next/Prev ###
+- Wrap around to last:
+no song in playlist!
+- Wrap around to first:
+no song in playlist!
+- Switch through all entries:
+no song in playlist!
+no song in playlist!
+no song in playlist!
+no song in playlist!
+no song in playlist!
+
+### Test Select ###
+-- Search for "Does not exist":
+song: Does not exist not found!
+no song in playlist!
+no song in playlist!
+
+-- Search for "Media 1":
+song: Media 1 not found!
+no song in playlist!
+no song in playlist!
+
+-- Search for "Media 2":
+song: Media 2 not found!
+no song in playlist!
+no song in playlist!
+
+-- Search for "Media 2" - Should find the same one again:
+song: Media 2 not found!
+no song in playlist!
+no song in playlist!
+### Test Stop/Play ###
+no video in playlist!
+no video in playlist!
+Increase volume 110 times.
+volume is now -> 9
+volume is now -> 10
+volume is now -> 11
+volume is now -> 12
+volume is now -> 13
+volume is now -> 14
+volume is now -> 15
+volume is now -> 16
+volume is now -> 17
+volume is now -> 18
+volume is now -> 19
+volume is now -> 20
+volume is now -> 21
+volume is now -> 22
+volume is now -> 23
+volume is now -> 24
+volume is now -> 25
+volume is now -> 26
+volume is now -> 27
+volume is now -> 28
+volume is now -> 29
+volume is now -> 30
+volume is now -> 31
+volume is now -> 32
+volume is now -> 33
+volume is now -> 34
+volume is now -> 35
+volume is now -> 36
+volume is now -> 37
+volume is now -> 38
+volume is now -> 39
+volume is now -> 40
+volume is now -> 41
+volume is now -> 42
+volume is now -> 43
+volume is now -> 44
+volume is now -> 45
+volume is now -> 46
+volume is now -> 47
+volume is now -> 48
+volume is now -> 49
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+volume is now -> 50
+Decrease volume 110 times.
+volume is now -> 49
+volume is now -> 48
+volume is now -> 47
+volume is now -> 46
+volume is now -> 45
+volume is now -> 44
+volume is now -> 43
+volume is now -> 42
+volume is now -> 41
+volume is now -> 40
+volume is now -> 39
+volume is now -> 38
+volume is now -> 37
+volume is now -> 36
+volume is now -> 35
+volume is now -> 34
+volume is now -> 33
+volume is now -> 32
+volume is now -> 31
+volume is now -> 30
+volume is now -> 29
+volume is now -> 28
+volume is now -> 27
+volume is now -> 26
+volume is now -> 25
+volume is now -> 24
+volume is now -> 23
+volume is now -> 22
+volume is now -> 21
+volume is now -> 20
+volume is now -> 19
+volume is now -> 18
+volume is now -> 17
+volume is now -> 16
+volume is now -> 15
+volume is now -> 14
+volume is now -> 13
+volume is now -> 12
+volume is now -> 11
+volume is now -> 10
+volume is now -> 9
+volume is now -> 8
+volume is now -> 7
+volume is now -> 6
+volume is now -> 5
+volume is now -> 4
+volume is now -> 3
+volume is now -> 2
+volume is now -> 1
+volume is now -> 0
+
+### Test Next/Prev ###
+- Wrap around to last:
+no video in playlist!
+- Wrap around to first:
+no video in playlist!
+- Switch through all entries:
+no video in playlist!
+no video in playlist!
+no video in playlist!
+no video in playlist!
+no video in playlist!
+
+### Test Select ###
+-- Search for "Does not exist":
+video: Does not exist not found!
+no video in playlist!
+no video in playlist!
+
+-- Search for "Media 1":
+video: Media 1 not found!
+no video in playlist!
+no video in playlist!
+
+-- Search for "Media 2":
+video: Media 2 not found!
+no video in playlist!
+no video in playlist!
+
+-- Search for "Media 2" - Should find the same one again:
+video: Media 2 not found!
+no video in playlist!
+no video in playlist!
+[       OK ] PlayerClient.SetPlayer (10 ms)
+[----------] 2 tests from PlayerClient (11 ms total)
+
+[----------] Global test environment tear-down
+[==========] 19 tests from 8 test cases ran. (147 ms total)
+[  PASSED  ] 19 tests.

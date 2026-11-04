@@ -26,7 +26,7 @@ void MusicPlayer::Stop() {
 
 void MusicPlayer::SwitchNext()
 {
-	size_t numOfSongs = mSongs.size();
+	size_t const numOfSongs = mSongs.size();
 	if (numOfSongs > 1)
 	{
 		// set index to first song if actIndex is at last one
@@ -59,8 +59,16 @@ size_t MusicPlayer::GetCount() const
 
 void MusicPlayer::IncreaseVol(size_t const vol)
 {
-	mVolume = mVolume + vol;
-	if (mVolume > MAX_VOLUME) mVolume = MAX_VOLUME;
+	if (vol > MAX_VOLUME - mVolume) // prevent size_t overflow
+	{
+		mVolume = MAX_VOLUME;
+	}
+	else
+	{
+		mVolume = mVolume + vol;
+	}
+
+	std::cout << "volume is now -> " << mVolume << std::endl;
 }
 
 void MusicPlayer::DecreaseVol(size_t const vol)
@@ -73,6 +81,8 @@ void MusicPlayer::DecreaseVol(size_t const vol)
 	{
 		mVolume = mVolume - vol;
 	}
+
+	std::cout << "volume is now -> " << mVolume << std::endl;
 }
 
 void MusicPlayer::Add(std::string const& name, size_t const dur)

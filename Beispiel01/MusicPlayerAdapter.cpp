@@ -1,9 +1,13 @@
 #include "MusicPlayerAdapter.h"
 #include <iostream>
 
-MusicPlayerAdapter::MusicPlayerAdapter(MusicPlayer::UPtr player) :
-	mPlayer{ std::move(player) }
+static std::string const cErrNullptr = "Provided player is nullptr";
+
+MusicPlayerAdapter::MusicPlayerAdapter(MusicPlayer::UPtr player)
 {
+	if (player == nullptr) throw std::invalid_argument{ cErrNullptr };
+
+	mPlayer = std::move(player);
 }
 
 void MusicPlayerAdapter::Play()
@@ -33,7 +37,7 @@ void MusicPlayerAdapter::Next()
 
 void MusicPlayerAdapter::Prev()
 {
-	for (int i = mPlayer->GetCount(); i > 1; i--) {
+	for (size_t i = mPlayer->GetCount(); i > 1; i--) {
 		//go forward size-1 times = go once backwards
 		mPlayer->SwitchNext();
 	}

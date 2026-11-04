@@ -2,9 +2,13 @@
 
 #include <iostream>
 
-VideoPlayerAdapter::VideoPlayerAdapter(VideoPlayer::UPtr player) :
-	mPlayer{ std::move(player) }
+static std::string const cErrNullptr = "Provided player is nullptr";
+
+VideoPlayerAdapter::VideoPlayerAdapter(VideoPlayer::UPtr player)
 {
+	if (player == nullptr) throw std::invalid_argument{ cErrNullptr };
+
+	mPlayer = std::move(player);
 }
 
 void VideoPlayerAdapter::Play()
@@ -24,7 +28,8 @@ void VideoPlayerAdapter::VolInc()
 
 void VideoPlayerAdapter::VolDec()
 {
-	mPlayer->SetVolume(mPlayer->GetVolume() - 1);
+	size_t const vol = mPlayer->GetVolume(); // Avoid size_t underflow.
+	if (vol >= 1) mPlayer->SetVolume(vol - 1);
 }
 
 void VideoPlayerAdapter::Next()

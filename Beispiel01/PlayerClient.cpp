@@ -3,11 +3,11 @@
 #include <stdexcept>
 #include <iostream>
 
-static std::string const cErrNullptr = "Provided player was nullptr";
+static std::string const cErrNullptr = "Provided player is nullptr";
 
-PlayerClient::PlayerClient(IMediaPlayer::UPtr player) :
-	mPlayer{ std::move(player) }
+PlayerClient::PlayerClient(IMediaPlayer::UPtr player)
 {
+	SetPlayer(std::move(player));
 }
 
 void PlayerClient::SetPlayer(IMediaPlayer::UPtr player)
