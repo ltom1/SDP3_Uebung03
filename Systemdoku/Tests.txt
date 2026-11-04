@@ -6,11 +6,11 @@ Running main() from D:\a\_work\1\s\googletest\googletest\src\gtest_main.cc
 [----------] 1 test from VideoFormat
 [ RUN      ] VideoFormat.Test
 [       OK ] VideoFormat.Test (0 ms)
-[----------] 1 test from VideoFormat (0 ms total)
+[----------] 1 test from VideoFormat (1 ms total)
 
 [----------] 1 test from Video
 [ RUN      ] Video.Test
-[       OK ] Video.Test (1 ms)
+[       OK ] Video.Test (0 ms)
 [----------] 1 test from Video (1 ms total)
 
 [----------] 3 tests from VideoPlayer
@@ -21,7 +21,7 @@ volume is now -> 0
 volume is now -> 50
 volume is now -> 50
 volume is now -> 50
-[       OK ] VideoPlayer.Empty (4 ms)
+[       OK ] VideoPlayer.Empty (12 ms)
 [ RUN      ] VideoPlayer.OneVideo
 stop video: Test [duration -> 123 min], AVI-Format
 playing video number 1: Test [duration -> 123 min], AVI-Format
@@ -29,7 +29,7 @@ playing video number 1: Test [duration -> 123 min], AVI-Format
 stop video: Test [duration -> 123 min], AVI-Format
 playing video number 1: Test [duration -> 123 min], AVI-Format
 stop video: Test [duration -> 123 min], AVI-Format
-[       OK ] VideoPlayer.OneVideo (14 ms)
+[       OK ] VideoPlayer.OneVideo (15 ms)
 [ RUN      ] VideoPlayer.MultipleVideos
 stop video: Video 1 [duration -> 1 min], AVI-Format
 playing video number 1: Video 1 [duration -> 1 min], AVI-Format
@@ -41,12 +41,12 @@ playing video number 3: Video 3 [duration -> 3 min], WMV-Format
 stop video: Video 3 [duration -> 3 min], WMV-Format
 stop video: Video 1 [duration -> 1 min], AVI-Format
 playing video number 1: Video 1 [duration -> 1 min], AVI-Format
-[       OK ] VideoPlayer.MultipleVideos (21 ms)
-[----------] 3 tests from VideoPlayer (40 ms total)
+[       OK ] VideoPlayer.MultipleVideos (22 ms)
+[----------] 3 tests from VideoPlayer (49 ms total)
 
 [----------] 1 test from Song
 [ RUN      ] Song.Test
-[       OK ] Song.Test (0 ms)
+[       OK ] Song.Test (1 ms)
 [----------] 1 test from Song (1 ms total)
 
 [----------] 3 tests from MusicPlayer
@@ -466,6 +466,7 @@ stop video: Media 1 [duration -> 1 min], MKV-Format
 
 -- Search for "Media 1":
 playing video number 1: Media 1 [duration -> 1 min], MKV-Format
+playing video number 1: Media 1 [duration -> 1 min], MKV-Format
 stop video: Media 1 [duration -> 1 min], MKV-Format
 
 -- Search for "Media 2":
@@ -477,7 +478,7 @@ stop video: Media 1 [duration -> 1 min], MKV-Format
 video: Media 2 not found!
 playing video number 1: Media 1 [duration -> 1 min], MKV-Format
 stop video: Media 1 [duration -> 1 min], MKV-Format
-[       OK ] VideoPlayerAdapter.One (7 ms)
+[       OK ] VideoPlayerAdapter.One (6 ms)
 [ RUN      ] VideoPlayerAdapter.Multiple
 ### Test Stop/Play ###
 stop video: Media 1 [duration -> 1 min], MKV-Format
@@ -665,16 +666,19 @@ stop video: Media 2 [duration -> 2 min], AVI-Format
 
 -- Search for "Media 1":
 playing video number 1: Media 1 [duration -> 1 min], MKV-Format
+playing video number 1: Media 1 [duration -> 1 min], MKV-Format
 stop video: Media 1 [duration -> 1 min], MKV-Format
 
 -- Search for "Media 2":
+playing video number 2: Media 2 [duration -> 2 min], AVI-Format
 playing video number 2: Media 2 [duration -> 2 min], AVI-Format
 stop video: Media 2 [duration -> 2 min], AVI-Format
 
 -- Search for "Media 2" - Should find the same one again:
 playing video number 2: Media 2 [duration -> 2 min], AVI-Format
+playing video number 2: Media 2 [duration -> 2 min], AVI-Format
 stop video: Media 2 [duration -> 2 min], AVI-Format
-[       OK ] VideoPlayerAdapter.Multiple (6 ms)
+[       OK ] VideoPlayerAdapter.Multiple (7 ms)
 [----------] 4 tests from VideoPlayerAdapter (27 ms total)
 
 [----------] 4 tests from MusicPlayerAdapter
@@ -939,7 +943,7 @@ no song in playlist!
 song: Media 2 not found!
 no song in playlist!
 no song in playlist!
-[       OK ] MusicPlayerAdapter.Empty (6 ms)
+[       OK ] MusicPlayerAdapter.Empty (5 ms)
 [ RUN      ] MusicPlayerAdapter.One
 ### Test Stop/Play ###
 stop song: Media 1 (1 sec)
@@ -1186,6 +1190,7 @@ playing song number 1: Media 1 (1 sec)
 stop song: Media 1 (1 sec)
 
 -- Search for "Media 1":
+playing song number 1: Media 1 (1 sec)
 playing song number 1: Media 1 (1 sec)
 stop song: Media 1 (1 sec)
 
@@ -1446,17 +1451,20 @@ stop song: Media 2 (2 sec)
 
 -- Search for "Media 1":
 playing song number 1: Media 1 (1 sec)
+playing song number 1: Media 1 (1 sec)
 stop song: Media 1 (1 sec)
 
 -- Search for "Media 2":
+playing song number 2: Media 2 (2 sec)
 playing song number 2: Media 2 (2 sec)
 stop song: Media 2 (2 sec)
 
 -- Search for "Media 2" - Should find the same one again:
 playing song number 2: Media 2 (2 sec)
+playing song number 2: Media 2 (2 sec)
 stop song: Media 2 (2 sec)
-[       OK ] MusicPlayerAdapter.Multiple (7 ms)
-[----------] 4 tests from MusicPlayerAdapter (21 ms total)
+[       OK ] MusicPlayerAdapter.Multiple (8 ms)
+[----------] 4 tests from MusicPlayerAdapter (22 ms total)
 
 [----------] 2 tests from PlayerClient
 [ RUN      ] PlayerClient.nullptr
@@ -1918,9 +1926,9 @@ no video in playlist!
 video: Media 2 not found!
 no video in playlist!
 no video in playlist!
-[       OK ] PlayerClient.SetPlayer (10 ms)
-[----------] 2 tests from PlayerClient (11 ms total)
+[       OK ] PlayerClient.SetPlayer (13 ms)
+[----------] 2 tests from PlayerClient (14 ms total)
 
 [----------] Global test environment tear-down
-[==========] 19 tests from 8 test cases ran. (147 ms total)
+[==========] 19 tests from 8 test cases ran. (161 ms total)
 [  PASSED  ] 19 tests.

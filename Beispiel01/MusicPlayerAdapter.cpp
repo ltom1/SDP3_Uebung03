@@ -45,5 +45,6 @@ void MusicPlayerAdapter::Prev()
 
 void MusicPlayerAdapter::Select(std::string const& name)
 {
-	if (!mPlayer->Find(name)) std::cout << "song: " << name << " not found!" << std::endl;
+	if (mPlayer->Find(name)) mPlayer->Start(); // Start playing the song!
+	else std::cout << "song: " << name << " not found!" << std::endl;
 }

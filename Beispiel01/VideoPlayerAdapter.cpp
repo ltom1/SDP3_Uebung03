@@ -63,7 +63,11 @@ void VideoPlayerAdapter::Select(std::string const& name)
 	{
 		do
 		{
-			if (mPlayer->ActVideo() == name) return; // Found!
+			if (mPlayer->ActVideo() == name) // Found!
+			{
+				mPlayer->Play(); // Play it.
+				return; 
+			}
 		} while (mPlayer->Next()); // Continue until end is reached.
 
 		// Was not found...
