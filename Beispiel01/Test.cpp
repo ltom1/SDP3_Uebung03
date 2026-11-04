@@ -78,12 +78,29 @@ TEST(VideoPlayer, Empty) {
 	EXPECT_EQ(player.ActVideo(), "");
 
 	EXPECT_EQ(player.GetVolume(), VideoPlayer::DEFAULT_VOLUME);
+	
+	CaptureStdout();
 	player.SetVolume(0);
 	EXPECT_EQ(player.GetVolume(), 0);
+	output = GetCapturedStdout();
+	EXPECT_EQ(output, "volume is now -> 0\n");
+	cout << output;
+	
+	CaptureStdout();
 	player.SetVolume(50);
 	EXPECT_EQ(player.GetVolume(), 50);
+	output = GetCapturedStdout();
+	EXPECT_EQ(output, "volume is now -> 50\n");
+	cout << output;
+
+	CaptureStdout();
 	player.SetVolume(VideoPlayer::MAX_VOLUME);
 	EXPECT_EQ(player.GetVolume(), VideoPlayer::MAX_VOLUME);
+	output = GetCapturedStdout();
+	EXPECT_EQ(output, string("volume is now -> ") + to_string(VideoPlayer::MAX_VOLUME) + "\n");
+	cout << output;
+
+
 	player.SetVolume(VideoPlayer::MAX_VOLUME + 1);
 	EXPECT_EQ(player.GetVolume(), VideoPlayer::MAX_VOLUME);
 }
